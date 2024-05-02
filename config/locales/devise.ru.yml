@@ -63,6 +63,3 @@ en:
       not_saved:
         one: "1 ошибка запретила сохранить этот %{resource}:"
         other: "%{count} ошибки запретили сохранить этот %{resource}:"
-    shared:
-      links:
-        b_register: Sign Up
