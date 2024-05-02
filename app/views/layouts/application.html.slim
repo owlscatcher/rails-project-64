@@ -13,8 +13,8 @@ html
       .navbar.navbar-expand-md.navbar-light.me-auto
         = link_to t('navbar.home'), root_path
       .nav.nav-pills
-        li.nav-item.me-2 = t('navbar.login')
-        li.nav-item.me-2 = t('navbar.registration')
+        li.nav-item.me-2 = link_to t('navbar.login'), new_user_session_path
+        li.nav-item.me-2 = link_to t('navbar.registration'), new_user_registration_path
 
     = yield
 
