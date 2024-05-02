@@ -50,10 +50,6 @@ gem 'slim_lint', '~> 0.27.0'
 gem 'faker', '~> 3.3', '>= 3.3.1'
 gem 'minitest-power_assert', '~> 0.3.1'
 
-gem 'sentry-rails', '~> 5.17', '>= 5.17.3'
-gem 'sentry-ruby', '~> 5.17', '>= 5.17.3'
-gem 'stackprof', '~> 0.2.26'
-
 gem 'rubocop-performance', '~> 1.21'
 gem 'rubocop-rails', '~> 2.24', '>= 2.24.1'
 
@@ -86,4 +82,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'sentry-rails', '~> 5.17', '>= 5.17.3'
+  gem 'sentry-ruby', '~> 5.17', '>= 5.17.3'
+  gem 'stackprof', '~> 0.2.26'
 end
