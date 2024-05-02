@@ -1,0 +1,6 @@
+en:
+  navbar:
+    home: Home
+    login: Login
+    logout: Logout
+    registration: Registration

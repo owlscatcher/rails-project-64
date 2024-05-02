@@ -1,6 +1,6 @@
 doctype html
 html
- head
+  head
     title RailsProject64
     meta name="viewport" content="width=device-width,initial-scale=1"
     = csrf_meta_tags
@@ -8,5 +8,16 @@ html
 
     = stylesheet_link_tag 'application', 'data-turbo-track': 'reload'
     = javascript_include_tag 'application', 'data-turbo-track': 'reload', type: 'module'
- body
+  body
+    .container.mb-2.d-flex.flex-wrap.align-items-center.py-2.border-bottom
+      .navbar.navbar-expand-md.navbar-light.me-auto
+        = link_to t('navbar.home'), root_path
+      .nav.nav-pills
+        li.nav-item.me-2 = t('navbar.login')
+        li.nav-item.me-2 = t('navbar.registration')
+
     = yield
+
+    footer.container.d-flex.flex-wrap.justify-content-between.align-items-center.py-3.my-4.border-top
+      p.col-md-4.mb-0.text-body-secondary
+        = "© #{Time.zone.today.year} Owls' Catcher"

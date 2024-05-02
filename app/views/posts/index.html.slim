@@ -1,0 +1,17 @@
+.container.my-4
+  h1 = t('page_header')
+
+  - if @posts.count.zero?
+    p = t('no_posts')
+
+  .row
+    - @posts.each do |post|
+      .col-md-12
+        .card.mb-3
+          .card-body
+            h2.h5.card-title = post.title
+            .card-text.mb-2 = post.content
+            .text-right.small.text-muted.mt-auto
+              span.me-2 = 'Понравилось'
+              span.me-2 = 'когда опубликовано'
+              span = 'Кто опубликовал'

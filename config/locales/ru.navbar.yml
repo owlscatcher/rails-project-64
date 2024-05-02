@@ -1,0 +1,6 @@
+ru:
+  navbar:
+    home: Главная
+    login: Вход
+    logout: Выход
+    registration: Регистрация
