@@ -25,6 +25,6 @@ module RailsProject64
     # config.eager_load_paths << Rails.root.join("extras")
 
     config.i18n.available_locales = %i[ru en]
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :ru
   end
 end

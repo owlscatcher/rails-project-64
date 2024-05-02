@@ -1,0 +1,25 @@
+.container.my-4
+  h2 Sign up
+
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = render 'devise/shared/error_messages', resource:
+
+    .form-floating.mb-2
+      = f.email_field :email, autofocus: true, autocomplete: 'email',
+        class: 'form-control', id: 'floatingInput', placeholder: 'name@example.com'
+      = f.label :email, for: 'floatingInput'
+
+    .form-floating.mb-2
+      = f.password_field :password, autocomplete: 'new-password',
+        class: 'form-control', id: 'floatingPassword', placeholder: 'password'
+      = f.label :password, for: 'floatingPassword'
+
+    .form-floating.mb-2
+      = f.password_field :password_confirmation, autocomplete: 'new-password',
+        class: 'form-control', id: 'floatingPasswordConfirmation', placeholder: 'password'
+      = f.label :password_confirmation, for: 'floatingPasswordConfirmation'
+
+    .actions
+      = f.submit 'Sign up', class: 'btn btn-primary'
+
+  = render 'devise/shared/links'
