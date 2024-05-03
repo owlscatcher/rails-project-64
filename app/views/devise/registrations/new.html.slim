@@ -1,5 +1,5 @@
 .container.my-4
-  h2 Sign up
+  h2 = t('.form_header')
 
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render 'devise/shared/error_messages', resource:
@@ -20,6 +20,6 @@
       = f.label :password_confirmation, for: 'floatingPasswordConfirmation'
 
     .actions
-      = f.submit 'Sign up', class: 'btn btn-primary'
+      = f.submit t('.sign_up'), class: 'btn btn-primary'
 
   = render 'devise/shared/links'

@@ -1,7 +1,12 @@
 # Additional translations at https://github.com/heartcombo/devise/wiki/I18n
 
-en:
+ru:
   devise:
+    shared:
+      links:
+        sign_up: Регистрация
+        sign_in: Войти
+        forgot_pswd: Забыли пароль?
     confirmations:
       confirmed: "Ваш адрес электронной почты успешно подтвержден."
       send_instructions: "Через несколько минут вы получите письмо с инструкциями по подтверждению адреса электронной почты."

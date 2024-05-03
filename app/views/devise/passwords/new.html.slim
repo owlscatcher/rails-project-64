@@ -1,5 +1,5 @@
 .container.my-4
-  h2 Forgot your password?
+  h2 = t('.form_header')
 
   = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
     = render 'devise/shared/error_messages', resource:
@@ -10,6 +10,6 @@
       = f.label :email, for: 'floatingInput'
 
     .actions
-      = f.submit 'Send me reset password instructions', class: 'btn btn-primary'
+      = f.submit t('.reset_password'), class: 'btn btn-primary'
 
   = render 'devise/shared/links'

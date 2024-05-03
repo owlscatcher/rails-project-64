@@ -19,6 +19,11 @@ html
         - else
           li.nav-item.me-2 = link_to t('navbar.login'), new_user_session_path
           li.nav-item.me-2 = link_to t('navbar.registration'), new_user_registration_path
+    - # rubocop:disable Style/HashEachMethods
+    - flash.each do |_, value|
+      .container.mb-2.d-flex.flex-wrap.alert.alert-info
+        = value
+    - # rubocop:enable Style/HashEachMethods
 
     = yield
 

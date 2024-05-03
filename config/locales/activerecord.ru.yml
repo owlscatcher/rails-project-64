@@ -1,0 +1,20 @@
+ru:
+  activerecord:
+    models:
+      users: Пользователи
+      user: Пользователь
+      posts: Посты
+      post: Пост
+    attributes:
+      post:
+        title: Заголовок
+        content: Контент
+        author: Автор
+      user:
+        username: Имя пользователя
+        first_name: Имя
+        last_name: Фамилия
+        email: Почта
+        password: Пароль
+        password_confirmation: Подтвердите пароль
+        remember_me: Запомнить меня

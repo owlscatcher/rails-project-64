@@ -13,5 +13,5 @@
             .card-text.mb-2 = post.content
             .text-right.small.text-muted.mt-auto
               span.me-2 = 'Понравилось'
-              span.me-2 = 'когда опубликовано'
-              span = 'Кто опубликовал'
+              span.me-2 = post.created_at
+              span = post.author.email

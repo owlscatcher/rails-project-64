@@ -1,5 +1,5 @@
 .container.my-4
-  h2 Log in
+  h2 = t('.form_header')
 
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .form-floating.mb-2
@@ -19,6 +19,6 @@
         = f.label :remember_me
 
     .actions
-      = f.submit 'Log in', class: 'btn btn-primary'
+      = f.submit t('.sign_in'), class: 'btn btn-primary'
 
   = render 'devise/shared/links'
