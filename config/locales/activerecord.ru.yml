@@ -8,8 +8,9 @@ ru:
     attributes:
       post:
         title: Заголовок
-        content: Контент
-        author: Автор
+        body: Контент
+        creator: Автор
+        category: Категория
       user:
         username: Имя пользователя
         first_name: Имя
@@ -18,3 +19,8 @@ ru:
         password: Пароль
         password_confirmation: Подтвердите пароль
         remember_me: Запомнить меня
+    errors:
+      messages:
+        blank: не может быть пустым
+        required: должна быть выбрана
+        too_short: слишком короткий

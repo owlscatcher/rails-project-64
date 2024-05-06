@@ -1,3 +1,8 @@
 en:
-  page_header: Collective blog
-  no_posts: No posts yet
+  posts:
+    index:
+      page_header: Collective blog
+      no_posts: No posts yet
+    create:
+      success: "Post was successfully created!"
+      fail: "Post was not created!"

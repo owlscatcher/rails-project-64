@@ -59,7 +59,7 @@ gem 'stackprof', '~> 0.2.26'
 
 gem 'devise', '~> 4.9', '>= 4.9.4'
 
-gem 'faker', '~> 3.3', '>= 3.3.1'
+gem 'simple_form', '~> 5.3'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

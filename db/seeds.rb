@@ -1,3 +1,3 @@
 10.times do
-  Catecory.create(name:)
+  Category.create(name: Faker::Games::DnD.title_name)
 end

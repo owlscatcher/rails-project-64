@@ -1,11 +1,11 @@
 .container.my-4
-  h1 = t('page_header')
+  h1 = t('.page_header')
 
   - if @posts.count.zero?
-    p = t('no_posts')
+    p = t('.no_posts')
 
   .row
-    - @posts.each do |post|
+    - @posts.latest.each do |post|
       .col-md-12
         .card.mb-3
           .card-body

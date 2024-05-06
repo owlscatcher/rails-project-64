@@ -8,8 +8,9 @@ en:
     attributes:
       post:
         title: Title
-        content: Content
-        author: Author
+        body: Content
+        creator: Author
+        category: Category
       user:
         username: Username
         first_name: First name
@@ -18,3 +19,8 @@ en:
         password: Password
         password_confirmation: Password confirmation
         remember_me: Remember me
+    errors:
+      messages:
+        blank: can't be blank
+        required: is required
+        too_short: is too short

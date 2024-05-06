@@ -11,14 +11,19 @@ html
   body
     .container.mb-2.d-flex.flex-wrap.align-items-center.py-2.border-bottom
       .navbar.navbar-expand-md.navbar-light.me-auto
-        = link_to t('navbar.home'), root_path
+        = link_to t('navbar.home'), root_path, { class: 'nav-link link-dark' }
       .nav.nav-pills
         - if current_user
-          li.nav-item.me-2 = link_to t('navbar.logout'),
-            destroy_user_session_path, data: { turbo_confirm: 'Are you sure?', turbo_method: :delete }
+          li.nav-item.nav-link.link-dark.me-2 = current_user.email
+          li.nav-item.me-2 = link_to t('navbar.new_post'), new_post_path, { class: 'nav-link link-dark' }
+          li.nav-item = link_to t('navbar.logout'),
+            destroy_user_session_path, { class: 'nav-link link-dark',
+            data: { turbo_confirm: 'Are you sure?', turbo_method: :delete } }
         - else
-          li.nav-item.me-2 = link_to t('navbar.login'), new_user_session_path
-          li.nav-item.me-2 = link_to t('navbar.registration'), new_user_registration_path
+          li.nav-item.me-2 = link_to t('navbar.login'), new_user_session_path,
+            { class: 'nav-link link-dark' }
+          li.nav-item.me-2 = link_to t('navbar.registration'), new_user_registration_path,
+            { class: 'nav-link link-dark' }
     - # rubocop:disable Style/HashEachMethods
     - flash.each do |_, value|
       .container.mb-2.d-flex.flex-wrap.alert.alert-info
