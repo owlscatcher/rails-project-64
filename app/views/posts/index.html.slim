@@ -10,8 +10,8 @@
         .card.mb-3
           .card-body
             h2.h5.card-title = post.title
-            .card-text.mb-2 = post.content
+            .card-text.mb-2 = post.body
             .text-right.small.text-muted.mt-auto
               span.me-2 = 'Понравилось'
               span.me-2 = post.created_at
-              span = post.author.email
+              span = post.creator.email
