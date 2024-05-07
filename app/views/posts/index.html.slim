@@ -5,13 +5,4 @@
     p = t('.no_posts')
 
   .row
-    - @posts.latest.each do |post|
-      .col-md-12
-        .card.mb-3
-          .card-body
-            h2.h5.card-title = post.title
-            .card-text.mb-2 = post.body
-            .text-right.small.text-muted.mt-auto
-              span.me-2 = 'Понравилось'
-              span.me-2 = post.created_at
-              span = post.creator.email
+    = render 'posts/shared/posts'

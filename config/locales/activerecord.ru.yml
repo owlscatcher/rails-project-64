@@ -17,10 +17,11 @@ ru:
         last_name: Фамилия
         email: Почта
         password: Пароль
-        password_confirmation: Подтвердите пароль
+        password_confirmation: Подтверждение пароля
         remember_me: Запомнить меня
     errors:
       messages:
         blank: не может быть пустым
         required: должна быть выбрана
         too_short: слишком короткий
+        confirmation: не совпадает с введеным %{attribute}

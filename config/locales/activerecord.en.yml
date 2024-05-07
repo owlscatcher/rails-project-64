@@ -24,3 +24,4 @@ en:
         blank: can't be blank
         required: is required
         too_short: is too short
+        confirmation: doesn't match %{attribute}

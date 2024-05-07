@@ -4,6 +4,10 @@ start:
 
 setup:
 	bundle install
+	bin/rails db:migrate db:seed
+
+cleanup:
+	bin/rails db:reset
 
 check: test lint
 
