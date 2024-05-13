@@ -1,5 +1,8 @@
 en:
   posts:
+    comments:
+      form:
+        form_header: Comments
     index:
       page_header: Collective blog
       no_posts: No posts yet

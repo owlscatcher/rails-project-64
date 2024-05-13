@@ -1,5 +1,8 @@
 ru:
   posts:
+    comments:
+      form:
+        form_header: Комментарии
     index:
       page_header: Коллективный блог
       no_posts: Еще нет опубликованных постов
