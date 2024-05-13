@@ -44,6 +44,7 @@ gem 'bootsnap', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem 'ancestry', '~> 4.3', '>= 4.3.3'
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'faker', '~> 3.3', '>= 3.3.1'
 gem 'minitest-power_assert', '~> 0.3.1'

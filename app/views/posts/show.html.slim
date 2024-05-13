@@ -9,9 +9,6 @@
   .mt-2
     - if @post.comments.empty?
       p = 'No comments'
-    -else
-      - @post.comments.each do |comment|
-        .text-right.mt-autho
-          span.me-2 = comment.user.email
-          span.me-2 = comment.created_at
-        p.me-2 = comment.content
+    - else
+      = render 'posts/comments/comment_block', comments: @post.comments
+
