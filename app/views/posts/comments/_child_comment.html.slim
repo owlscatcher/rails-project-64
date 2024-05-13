@@ -1,10 +1,13 @@
-- child_comment.each do |comment|
-  .card.mb-4
-    .card-header
-      span.me-2 = comment.user.email
-      span = comment.created_at
-    .card-body
-      p = comment.content
+.ms-4.mt-4
+  - child_comment.each do |comment|
+    .card.mb-4
+      .card-header
+        span.me-2 = comment.user.email
+        span = comment.created_at
+      .card-body
+        p = comment.content
+      .card-footer
+        = render 'posts/comments/replay_link', comment:
 
       - if comment.children.any?
-          = render 'posts/comments/child_comment', child_comment: comment.children
+        = render 'posts/comments/child_comment', child_comment: comment.children

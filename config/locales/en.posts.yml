@@ -3,6 +3,10 @@ en:
     comments:
       form:
         form_header: Comments
+      replay_link:
+        link_text: replay
+      success: "Comment was created successfully!"
+      fail: "Comment was not created!"
     index:
       page_header: Collective blog
       no_posts: No posts yet

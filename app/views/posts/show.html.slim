@@ -5,10 +5,10 @@
     span.me-2 = @post.creator.email
     span.me-2 = @post.created_at
 
-  = render 'posts/comments/form', post: @post
+  = render 'posts/comments/form', post: @post, comment: @comment
+
   .mt-2
     - if @post.comments.empty?
       p = 'No comments'
     - else
       = render 'posts/comments/comment_block', comments: @post.comments
-

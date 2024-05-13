@@ -5,6 +5,7 @@ en:
       user: User
       posts: Posts
       post: Post
+      post_comment: comment
     attributes:
       post:
         title: Title

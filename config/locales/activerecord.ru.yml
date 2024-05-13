@@ -5,6 +5,7 @@ ru:
       user: Пользователь
       posts: Посты
       post: Пост
+      post_comment: комментарий
     attributes:
       post:
         title: Заголовок

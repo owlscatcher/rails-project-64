@@ -3,6 +3,10 @@ ru:
     comments:
       form:
         form_header: Комментарии
+      replay_link:
+        link_text: ответить
+      success: "Комментарий успешно добавлен!"
+      fail: "Комментарий не был добавлен!"
     index:
       page_header: Коллективный блог
       no_posts: Еще нет опубликованных постов

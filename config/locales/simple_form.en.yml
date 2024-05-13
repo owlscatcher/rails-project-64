@@ -34,3 +34,5 @@ en:
       user:
         create: "Add %{model}"
         update: "Save Changes"
+      post_comment:
+        create: "Add %{model}"

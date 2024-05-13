@@ -34,3 +34,5 @@ ru:
       post:
         create: "Создать %{model}"
         update: "Сохранить изменения"
+      post_comment:
+        create: "Оставить %{model}"
