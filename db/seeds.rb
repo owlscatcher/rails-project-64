@@ -33,15 +33,18 @@ end
   PostComment.create(
     user: User.find_by(id: rand(1..10)),
     post: Post.find_by(id: rand(1..10)),
-    content: Faker::Books::Lovecraft.paragraphs.join("\n")
+    content: Faker::Books::Lovecraft.paragraphs.join("\n"),
+    parent_id: nil
   )
 end
 
 20.times do
+  post = Post.joins(:comments).where.not(comments: { id: nil }).sample
+
   PostComment.create(
     user: User.find_by(id: rand(1..10)),
-    post: Post.find_by(id: rand(1..10)),
+    post:,
     content: Faker::Books::Lovecraft.paragraphs.join("\n"),
-    parent_id: rand(1..20)
+    parent_id: post.comments.sample.id
   )
 end
