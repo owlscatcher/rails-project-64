@@ -28,3 +28,20 @@ end
     category: Category.find_by(id: rand(1..10))
   )
 end
+
+20.times do
+  PostComment.create(
+    user: User.find_by(id: rand(1..10)),
+    post: Post.find_by(id: rand(1..10)),
+    content: Faker::Books::Lovecraft.paragraphs.join("\n")
+  )
+end
+
+20.times do
+  PostComment.create(
+    user: User.find_by(id: rand(1..10)),
+    post: Post.find_by(id: rand(1..10)),
+    content: Faker::Books::Lovecraft.paragraphs.join("\n"),
+    parent_id: rand(1..20)
+  )
+end

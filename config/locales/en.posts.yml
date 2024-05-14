@@ -13,3 +13,7 @@ en:
     create:
       success: "Post was successfully created!"
       fail: "Post was not created!"
+    shared:
+      post_footer:
+        published: published
+        ago: ago

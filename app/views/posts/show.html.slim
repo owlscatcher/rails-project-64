@@ -1,14 +1,16 @@
 .container.my-4
-  h1.mb-4.mb-lg-5 = @post.title
-  p.mb-2 = simple_format(@post.body)
-  .text-right.small.text-muted.mt-auto
-    span.me-2 = @post.creator.email
-    span.me-2 = @post.created_at
+  section#post-section
+    h1.mb-4.mb-lg-5 = @post.title
+    p.mb-2 = simple_format(@post.body)
+    = render 'posts/shared/post_footer', post: @post
+    hr
+    section#left-comment-section
+      .lead.display-6.my-2 = 'Комментарии'
+      - if current_user
+        = render 'posts/comments/form', post: @post, comment: @comment
 
-  = render 'posts/comments/form', post: @post, comment: @comment
-
-  .mt-2
+  section#comment-section
     - if @post.comments.empty?
-      p = 'No comments'
+      p.lead = 'No comments'
     - else
       = render 'posts/comments/comment_block', comments: @post.comments

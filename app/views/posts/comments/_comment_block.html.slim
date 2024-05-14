@@ -3,9 +3,9 @@
     .card.mb-4
       .card-header
         span.me-2 = comment.user.email
-        span = comment.created_at
+        span = I18n.l(comment.created_at)
       .card-body
-        p = comment.content
+        p = simple_format(comment.content)
       .card-footer
         = render 'posts/comments/replay_link', comment:
 

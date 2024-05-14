@@ -13,3 +13,7 @@ ru:
     create:
       success: "Пост успешно создан!"
       fail: "Пост не был создан!"
+    shared:
+      post_footer:
+        published: опубликовал
+        ago: назад
