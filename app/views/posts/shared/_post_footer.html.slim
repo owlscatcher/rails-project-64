@@ -1,7 +1,7 @@
 .row
   .col
     .small.text-muted.mss-auto
-      span.me-2  = post.creator.email
+      span.me-2 = post.creator.email
       span = "#{t('.published')} #{distance_of_time_in_words_to_now(post.created_at)} #{t('.ago')}"
   .col.justify-content-end
     .text-end.small.text-muted.ms-auto
