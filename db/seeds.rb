@@ -30,12 +30,21 @@ end
 end
 
 20.times do
-  PostComment.create(
+  post_comment = PostComment.create(
     user: User.find_by(id: rand(1..10)),
     post: Post.find_by(id: rand(1..10)),
     content: Faker::Books::Lovecraft.paragraphs.join("\n"),
     parent_id: nil
   )
+
+  10.times do
+    PostComment.create(
+      user: User.find_by(id: rand(1..10)),
+      post: post_comment.post,
+      content: Faker::Books::Lovecraft.paragraphs.join("\n"),
+      parent_id: post_comment.id
+    )
+  end
 end
 
 20.times do
