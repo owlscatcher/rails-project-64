@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many :comments, class_name: 'PostComment', dependent: :destroy
+  has_many :likes, class_name: 'PostLike', dependent: :destroy
 
   validates :password, presence: true, length: { minimum: 6 }
   validates :email, presence: true, uniqueness: true

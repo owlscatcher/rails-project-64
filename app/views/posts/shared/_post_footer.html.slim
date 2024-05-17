@@ -10,5 +10,5 @@
       -else
         span.i.bi.bi-chat-square-text.text-primary.me-2
       span.me-2 = post.comments.count
-      span.i.bi.bi-heart-fill.text-danger.me-2
-      span = '2'
+      - if local_assigns[:selected] == 'post'
+        = render 'posts/likes/like_button', post:, likes:

@@ -2,7 +2,7 @@
   section#post-section
     h1.mb-4.mb-lg-5 = @post.title
     p.mb-2 = simple_format(@post.body)
-    = render 'posts/shared/post_footer', post: @post
+    = render 'posts/shared/post_footer', post: @post, likes: @user_likes, selected: 'post'
     hr
     section#left-comment-section
       .lead.display-6.my-2 = 'Комментарии'
