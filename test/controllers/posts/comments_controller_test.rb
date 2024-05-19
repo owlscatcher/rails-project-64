@@ -12,7 +12,7 @@ class Posts::CommentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should create root comment' do
-    assert_difference('PostComment.count') do
+    assert_difference -> { PostComment.count } do
       post post_comments_path(@post), params: { post_comment: { content: 'test', user: @user, parent_id: nil } }
     end
 
@@ -20,7 +20,7 @@ class Posts::CommentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should create nested comment' do
-    assert_difference('PostComment.count') do
+    assert_difference -> { PostComment.count } do
       post post_comments_path(@post), params: { post_comment: { content: 'test', user: @user, parent_id: @with_comments.id } }
     end
 

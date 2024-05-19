@@ -23,7 +23,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   test 'should create a new post' do
     sign_in @user
 
-    assert_difference('Post.count') do
+    assert_difference -> { Post.count } do
       post posts_url, params: { post: @post_params }
     end
 
@@ -32,7 +32,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should create a new post with logout user' do
-    assert_no_difference('Post.count') do
+    assert_no_difference -> { Post.count } do
       post posts_url, params: { post: @post_params }
     end
 
@@ -42,7 +42,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   test 'should create a new post with invalid params' do
     sign_in @user
 
-    assert_no_difference('Post.count') do
+    assert_no_difference -> { Post.count } do
       post posts_url, params: { post: { title: '', body: '', creator: @user, category_id: 1 } }
     end
 
