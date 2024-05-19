@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Posts
   class CommentsController < ApplicationController
     before_action :authenticate_user!, only: %i[create]
