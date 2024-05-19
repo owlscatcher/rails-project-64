@@ -9,9 +9,7 @@ module Posts
     end
 
     def destroy
-      return if @like.nil?
-
-      @like.destroy
+      @like&.destroy
       redirect_to resource_post
     end
 

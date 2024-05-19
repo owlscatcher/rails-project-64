@@ -30,5 +30,6 @@ class Posts::LikesControllerTest < ActionDispatch::IntegrationTest
     assert_no_difference -> { PostLike.count }, -1 do
       delete post_like_path(@post, @like)
     end
+    assert_redirected_to @post
   end
 end
