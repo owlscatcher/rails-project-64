@@ -10,7 +10,7 @@
         = render 'posts/comments/form', post: @post, comment: @comment
 
   section#comment-section
-    - if @post.comments.empty?
+    - if @post_comments.empty?
       p.lead = 'No comments'
     - else
-      = render 'posts/comments/comment_block', comments: @post.comments
+      = render 'posts/comments/comment_block', comments: @post_comments

@@ -9,8 +9,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
-    @user_likes = @post.likes.find { |like| like.user_id == current_user.id } if current_user
+    @post = Post.includes(:comments, :likes).find(params[:id])
+    @post_comments = @post.comments
+    @user_likes = @post.likes.find_by(user_id: current_user.id) if current_user
     @comment = PostComment.new
   end
 
