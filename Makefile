@@ -4,6 +4,9 @@ start:
 
 setup:
 	bundle install
+	yanr install
+	yarn build
+	yarn build:css
 	bin/rails db:migrate db:seed
 
 cleanup:

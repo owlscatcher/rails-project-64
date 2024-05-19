@@ -6,3 +6,6 @@
 
   .div#post-section
     = render 'posts/shared/posts'
+
+  .div#pagination-section
+    .d-flex.justify-content-center == pagy_bootstrap_nav(@pagy)
