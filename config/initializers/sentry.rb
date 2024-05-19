@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Sentry.init do |config|
   config.dsn = 'https://d08b787602417aee3d69e77243a51a2b@o4507184816979968.ingest.de.sentry.io/4507184830349392'
   config.breadcrumbs_logger = %i[active_support_logger http_logger]
