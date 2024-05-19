@@ -25,4 +25,10 @@ class Posts::LikesControllerTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to @post
   end
+
+  test 'should destroy a invalid like' do
+    assert_no_difference -> { PostLike.count }, -1 do
+      delete post_like_path(@post, @like)
+    end
+  end
 end
