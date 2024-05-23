@@ -6,7 +6,9 @@
   = link_to t('.sign_up'), new_registration_path(resource_name)
   br
 
-- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+- banned_controller_names = %w[passwords registrations sessions]
+
+- if devise_mapping.recoverable? && banned_controller_names.exclude?(controller_name)
   = link_to t('.forgot_pswd'), new_password_path(resource_name)
   br
 
