@@ -16,7 +16,7 @@ ru:
         username: Имя пользователя
         first_name: Имя
         last_name: Фамилия
-        email: Почта
+        email: Email
         password: Пароль
         password_confirmation: Подтверждение пароля
         remember_me: Запомнить меня

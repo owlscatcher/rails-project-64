@@ -2,16 +2,15 @@
   h2 = t('.form_header')
 
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    .form-floating.mb-2
+    .form-group.mb-2
+      = f.label :email
       = f.email_field :email, autofocus: true,
-        autocomplete: 'email', class: 'form-control',
-        id: 'floatingInput', placeholder: 'name@example.com'
-      = f.label :email, for: 'floatingInput'
+        autocomplete: 'email', class: 'form-control'
 
-    .form-floating.mb-2
+    .form-group.mb-2
+      = f.label :password
       = f.password_field :password, autocomplete: 'current-password',
-        class: 'form-control', id: 'floatingPassword', placeholder: 'password'
-      = f.label :password, for: 'floatingPassword'
+        class: 'form-control'
 
     - if devise_mapping.rememberable?
       .form-group.mb-2
