@@ -145,12 +145,12 @@ ru:
   devise:
     sessions:
       new:
-        form_header: Форма входа
+        form_header: Войти
         sign_in: Войти
         sign_up: Зарегистрироваться
     registrations:
       new:
-        form_header: Форма регистрации
+        form_header: Регистрация
         sign_up: Зарегистрироваться
     passwords:
       new:

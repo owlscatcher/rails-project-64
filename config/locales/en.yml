@@ -13,11 +13,12 @@ en:
   devise:
     sessions:
       new:
-        form_header: Login form
+        form_header: Login
         sign_in: Sign In
         sign_up: Sign Up
     registrations:
       new:
+        form_header: Registration
         sign_up: Sign Up
     passwords:
       new:
