@@ -7,7 +7,7 @@
     section#left-comment-section
       .lead.display-6.my-2 = 'Комментарии'
       - if current_user
-        = render 'posts/comments/form', post: @post, comment: @comment
+        = render 'posts/comments/comment_form', post: @post, comment: @comment
 
   section#comment-section
     - if @post_comments.empty?

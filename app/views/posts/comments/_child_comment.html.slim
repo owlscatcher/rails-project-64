@@ -7,8 +7,9 @@
         span = I18n.l(comment.created_at)
       .card-body
         p = simple_format(comment.content)
-      .card-footer
-        = render 'posts/comments/replay_link', comment:
+      - if current_user
+        .card-footer
+          = render 'posts/comments/replay_form', comment:
 
       - if comment.children.any?
         = render 'posts/comments/child_comment', child_comment: comment.children

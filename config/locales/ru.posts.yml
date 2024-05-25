@@ -1,9 +1,9 @@
 ru:
   posts:
     comments:
-      form:
+      comment_form:
         form_header: Комментарии
-      replay_link:
+      replay_form:
         link_text: ответить
       success: "Комментарий успешно добавлен!"
       fail: "Комментарий не был добавлен!"

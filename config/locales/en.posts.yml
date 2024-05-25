@@ -1,9 +1,9 @@
 en:
   posts:
     comments:
-      form:
+      comment_form:
         form_header: Comments
-      replay_link:
+      replay_form:
         link_text: replay
       success: "Comment was created successfully!"
       fail: "Comment was not created!"
