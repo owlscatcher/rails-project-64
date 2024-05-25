@@ -11,9 +11,16 @@ ru:
       page_header: Коллективный блог
       no_posts: Еще нет опубликованных постов
     create:
-      success: "Пост успешно создан!"
-      fail: "Пост не был создан!"
+      success: "Пост опубликован"
+      fail: "Не удалось создать пост. Проверьте введенные данные"
     shared:
       post_footer:
         published: опубликовал
         ago: назад
+    show:
+      all_posts: Все посты
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " и "
+      last_word_connector: ", и "

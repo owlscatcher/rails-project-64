@@ -11,7 +11,7 @@ module Posts
       if @comment.save
         redirect_to resource_post, notice: t('.success')
       else
-        redirect_to resource_post, notice: t('.fail')
+        redirect_to resource_post, alert: @comment.errors.full_messages.first
       end
     end
 

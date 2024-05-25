@@ -11,9 +11,11 @@ en:
       page_header: Collective blog
       no_posts: No posts yet
     create:
-      success: "Post was successfully created!"
-      fail: "Post was not created!"
+      success: "Post published"
+      fail: "Failed to create a post. Check the entered data"
     shared:
       post_footer:
         published: published
         ago: ago
+    show:
+      all_posts: All posts

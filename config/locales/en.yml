@@ -24,3 +24,8 @@ en:
       new:
         form_header: Reset password form
         reset_password: Send me reset password instructions
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " and "
+      last_word_connector: ", and "

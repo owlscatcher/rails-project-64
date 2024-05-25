@@ -12,6 +12,8 @@ en:
         body: Content
         creator: Author
         category: Category
+      post_comment:
+        content: Comments body
       user:
         username: Username
         first_name: First name
@@ -24,5 +26,6 @@ en:
       messages:
         blank: can't be blank
         required: is required
-        too_short: is too short
+        too_short: insufficient length (cannot be less than %{count} character)
+        too_long: too long (cannot be longer than %{count} character)
         confirmation: doesn't match %{attribute}

@@ -25,7 +25,8 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to root_path, notice: t('.success')
     else
-      render :new, status: :unprocessable_entity, notice: t('.fail')
+      flash.now[:error] = t('.fail')
+      render :new, status: :unprocessable_entity
     end
   end
 

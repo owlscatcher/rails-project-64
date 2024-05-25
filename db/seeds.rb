@@ -25,7 +25,9 @@ end
 30.times do
   Post.create(
     title: Faker::Books::Lovecraft.sentence,
-    body: Faker::Books::Lovecraft.paragraphs.join("\n"),
+    body: Faker::Books::Lovecraft
+      .paragraphs(sentence_count: 10, random_sentences_to_add: 5)
+      .join("\n"),
     creator: User.find_by(id: rand(1..10)),
     category: Category.find_by(id: rand(1..10))
   )

@@ -1,6 +1,6 @@
-.container.my-4
+.container.my-4.px-0
   = simple_form_for @post do |f|
-    = f.input :title, autofocus: true, placeholder: Faker::Games::DnD.title_name
+    = f.input :title, autofocus: true, hint: t('simple_form.hints.title_size')
     = f.association :category
-    = f.input :body, placeholder: Faker::Books::Lovecraft.paragraph
+    = f.input :body, input_html: { rows: 10 }, hint: t('simple_form.hints.body_size')
     = f.button :submit, class: 'btn btn-success'

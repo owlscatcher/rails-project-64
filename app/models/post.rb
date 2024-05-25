@@ -8,7 +8,8 @@ class Post < ApplicationRecord
   has_many :likes, class_name: 'PostLike', dependent: :destroy
 
   validates :title, :body, presence: true
-  validates :title, length: { minimum: 3, maximum: 255 }
+  validates :title, length: { minimum: 5, maximum: 255 }
+  validates :body, length: { minimum: 200, maximum: 4000 }
 
   scope :latest, -> { order(created_at: :desc) }
 end

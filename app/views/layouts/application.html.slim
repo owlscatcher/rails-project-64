@@ -9,15 +9,15 @@ html
     = stylesheet_link_tag 'application', 'data-turbo-track': 'reload'
     = javascript_include_tag 'application', 'data-turbo-track': 'reload', type: 'module'
   body
-    .container.mb-2.d-flex.flex-wrap.align-items-center.py-2.border-bottom
+    .container.mb-2.px-0.d-flex.flex-wrap.align-items-center.py-2.border-bottom
       .navbar.navbar-expand-md.navbar-light.me-auto
         = link_to t('navbar.home'), root_path, { class: 'nav-link link-dark' }
       .nav.nav-pills
         - if current_user
-          li.nav-item.nav-link.link-dark.me-2 = current_user.email
-          li.nav-item.me-2 = link_to t('navbar.new_post'), new_post_path, { class: 'nav-link link-dark' }
+          li.nav-item.nav-link.link-dark = current_user.email
+          li.nav-item = link_to t('navbar.new_post'), new_post_path, { class: 'nav-link link-dark' }
           li.nav-item = link_to t('navbar.logout'),
-            destroy_user_session_path, { class: 'nav-link link-dark',
+            destroy_user_session_path, { class: 'nav-link link-dark pe-0',
             data: { turbo_confirm: 'Are you sure?', turbo_method: :delete } }
         - else
           li.nav-item.me-2 = link_to t('navbar.login'), new_user_session_path,
@@ -25,9 +25,8 @@ html
           li.nav-item.me-2 = link_to t('navbar.registration'), new_user_registration_path,
             { class: 'nav-link link-dark' }
     - # rubocop:disable Style/HashEachMethods
-    - flash.each do |_, value|
-      .container.mb-2.d-flex.flex-wrap.alert.alert-info
-        = value
+    - flash.each do
+      = render 'layouts/flash'
     - # rubocop:enable Style/HashEachMethods
 
     = yield

@@ -10,6 +10,9 @@ ru:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Пожалуйста, ознакомьтесь с приведенными ниже проблемами:"
+    hints:
+      title_size: "5-255 символов"
+      body_size: "От 200 до 4000 символов"
     # Examples
     # labels:
     #   defaults:
