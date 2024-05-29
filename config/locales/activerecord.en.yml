@@ -29,3 +29,4 @@ en:
         too_short: insufficient length (cannot be less than %{count} character)
         too_long: too long (cannot be longer than %{count} character)
         confirmation: doesn't match %{attribute}
+        record_invalid: doesn't create a record
