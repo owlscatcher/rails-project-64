@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[show]
 
   def index
-    @pagy, @posts = pagy(Post.all)
+    @pagy, @posts = pagy(Post.includes(:creator).all)
   end
 
   def show

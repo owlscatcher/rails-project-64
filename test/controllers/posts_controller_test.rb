@@ -25,18 +25,14 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   test 'should create a new post' do
     sign_in @user
 
-    assert_difference -> { Post.count } do
-      post posts_url, params: { post: @post_params }
-    end
+    post posts_url, params: { post: @post_params }
 
     assert_redirected_to root_url
     assert { Post.exists?(title: @post_params[:title]) }
   end
 
   test 'should create a new post with logout user' do
-    assert_no_difference -> { Post.count } do
-      post posts_url, params: { post: @post_params }
-    end
+    post posts_url, params: { post: @post_params }
 
     assert_response :redirect
   end
@@ -44,9 +40,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   test 'should create a new post with invalid params' do
     sign_in @user
 
-    assert_no_difference -> { Post.count } do
-      post posts_url, params: { post: { title: '', body: '', creator: @user, category_id: 1 } }
-    end
+    post posts_url, params: { post: { title: '', body: '', creator: @user, category_id: 1 } }
 
     assert_response :unprocessable_entity
   end

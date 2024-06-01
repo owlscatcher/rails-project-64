@@ -20,9 +20,5 @@ module Posts
     def set_like
       @like = resource_post.likes.find_by(user: current_user)
     end
-
-    def post_params
-      params.require(:post_like).permit(:post_id)
-    end
   end
 end

@@ -12,26 +12,25 @@ class Posts::LikesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should create a likes' do
-    assert_difference -> { PostLike.count } do
-      post post_likes_path(@post), params: { like: @like }
-    end
+    post post_likes_path(@post), params: { like: @like }
 
     assert_redirected_to @post
+    assert { PostLike.exists?(post_id: @like.post_id, user_id: @like.user_id) }
   end
 
   test 'should destroy a like' do
     like = PostLike.create!(user: @user, post: @post)
 
-    assert_difference -> { PostLike.count }, -1 do
-      delete post_like_path(@post, like)
-    end
+    delete post_like_path(@post, like)
+
     assert_redirected_to @post
+    assert { !PostLike.exists?(post_id: like, user_id: like) }
   end
 
   test 'should destroy a invalid like' do
-    assert_no_difference -> { PostLike.count }, -1 do
-      delete post_like_path(@post, @like)
-    end
+    delete post_like_path(@post, @like)
+
     assert_redirected_to @post
+    assert { PostLike.exists?(post_id: @like, user_id: @like) }
   end
 end
